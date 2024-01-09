@@ -14,96 +14,96 @@ namespace PokemonReviewApp
         {
             if (!dataContext.PokemonOwners.Any())
             {
-                var pokemonOwners = new List<PokemonOwner>()
+                var pokemonOwners = new List<PokemonOwnerModel>()
                 {
-                    new PokemonOwner()
+                    new PokemonOwnerModel()
                     {
-                        Pokemon = new Pokemon()
+                        Pokemon = new PokemonModel()
                         {
                             Name = "Pikachu",
                             BirthDate = new DateTime(1903,1,1),
-                            PokemonCategories = new List<PokemonCategory>()
+                            PokemonCategories = new List<PokemonCategoryModel>()
                             {
-                                new PokemonCategory { Category = new Category() { Name = "Electric"}}
+                                new PokemonCategoryModel { Category = new CategoryModel() { Name = "Electric"}}
                             },
-                            Reviews = new List<Review>()
+                            Reviews = new List<ReviewModel>()
                             {
-                                new Review { Title="Pikachu",Text = "Pickahu is the best pokemon, because it is electric", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Teddy", LastName = "Smith" } },
-                                new Review { Title="Pikachu", Text = "Pickachu is the best a killing rocks", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Taylor", LastName = "Jones" } },
-                                new Review { Title="Pikachu",Text = "Pickchu, pickachu, pikachu", Rating = 1,
-                                Reviewer = new Reviewer(){ FirstName = "Jessica", LastName = "McGregor" } },
+                                new ReviewModel { Title="Pikachu",Text = "Pickahu is the best pokemon, because it is electric", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Teddy", LastName = "Smith" } },
+                                new ReviewModel { Title="Pikachu", Text = "Pickachu is the best a killing rocks", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Taylor", LastName = "Jones" } },
+                                new ReviewModel { Title="Pikachu",Text = "Pickchu, pickachu, pikachu", Rating = 1,
+                                Reviewer = new ReviewerModel(){ FirstName = "Jessica", LastName = "McGregor" } },
                             }
                         },
-                        Owner = new Owner()
+                        Owner = new OwnerModel()
                         {
                             FirstName = "Jack",
                             LastName = "London",
                             Gym = "Brocks Gym",
-                            Country = new Country()
+                            Country = new CountryModel()
                             {
                                 Name = "Kanto"
                             }
                         }
                     },
-                    new PokemonOwner()
+                    new PokemonOwnerModel()
                     {
-                        Pokemon = new Pokemon()
+                        Pokemon = new PokemonModel()
                         {
                             Name = "Squirtle",
                             BirthDate = new DateTime(1903,1,1),
-                            PokemonCategories = new List<PokemonCategory>()
+                            PokemonCategories = new List<PokemonCategoryModel>()
                             {
-                                new PokemonCategory { Category = new Category() { Name = "Water"}}
+                                new PokemonCategoryModel { Category = new CategoryModel() { Name = "Water"}}
                             },
-                            Reviews = new List<Review>()
+                            Reviews = new List<ReviewModel>()
                             {
-                                new Review { Title= "Squirtle", Text = "squirtle is the best pokemon, because it is electric", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Teddy", LastName = "Smith" } },
-                                new Review { Title= "Squirtle",Text = "Squirtle is the best a killing rocks", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Taylor", LastName = "Jones" } },
-                                new Review { Title= "Squirtle", Text = "squirtle, squirtle, squirtle", Rating = 1,
-                                Reviewer = new Reviewer(){ FirstName = "Jessica", LastName = "McGregor" } },
+                                new ReviewModel { Title= "Squirtle", Text = "squirtle is the best pokemon, because it is electric", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Teddy", LastName = "Smith" } },
+                                new ReviewModel { Title= "Squirtle",Text = "Squirtle is the best a killing rocks", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Taylor", LastName = "Jones" } },
+                                new ReviewModel { Title= "Squirtle", Text = "squirtle, squirtle, squirtle", Rating = 1,
+                                Reviewer = new ReviewerModel(){ FirstName = "Jessica", LastName = "McGregor" } },
                             }
                         },
-                        Owner = new Owner()
+                        Owner = new OwnerModel()
                         {
                             FirstName = "Harry",
                             LastName = "Potter",
                             Gym = "Mistys Gym",
-                            Country = new Country()
+                            Country = new CountryModel()
                             {
                                 Name = "Saffron City"
                             }
                         }
                     },
-                                    new PokemonOwner()
+                                    new PokemonOwnerModel()
                     {
-                        Pokemon = new Pokemon()
+                        Pokemon = new PokemonModel()
                         {
                             Name = "Venasuar",
                             BirthDate = new DateTime(1903,1,1),
-                            PokemonCategories = new List<PokemonCategory>()
+                            PokemonCategories = new List<PokemonCategoryModel>()
                             {
-                                new PokemonCategory { Category = new Category() { Name = "Leaf"}}
+                                new PokemonCategoryModel { Category = new CategoryModel() { Name = "Leaf"}}
                             },
-                            Reviews = new List<Review>()
+                            Reviews = new List<ReviewModel>()
                             {
-                                new Review { Title="Veasaur",Text = "Venasuar is the best pokemon, because it is electric", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Teddy", LastName = "Smith" } },
-                                new Review { Title="Veasaur",Text = "Venasuar is the best a killing rocks", Rating = 5,
-                                Reviewer = new Reviewer(){ FirstName = "Taylor", LastName = "Jones" } },
-                                new Review { Title="Veasaur",Text = "Venasuar, Venasuar, Venasuar", Rating = 1,
-                                Reviewer = new Reviewer(){ FirstName = "Jessica", LastName = "McGregor" } },
+                                new ReviewModel { Title="Veasaur",Text = "Venasuar is the best pokemon, because it is electric", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Teddy", LastName = "Smith" } },
+                                new ReviewModel { Title="Veasaur",Text = "Venasuar is the best a killing rocks", Rating = 5,
+                                Reviewer = new ReviewerModel(){ FirstName = "Taylor", LastName = "Jones" } },
+                                new ReviewModel { Title="Veasaur",Text = "Venasuar, Venasuar, Venasuar", Rating = 1,
+                                Reviewer = new ReviewerModel(){ FirstName = "Jessica", LastName = "McGregor" } },
                             }
                         },
-                        Owner = new Owner()
+                        Owner = new OwnerModel()
                         {
                             FirstName = "Ash",
                             LastName = "Ketchum",
                             Gym = "Ashs Gym",
-                            Country = new Country()
+                            Country = new CountryModel()
                             {
                                 Name = "Millet Town"
                             }

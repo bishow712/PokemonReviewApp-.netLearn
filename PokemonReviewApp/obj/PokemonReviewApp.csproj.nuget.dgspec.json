@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bidhya\\Desktop\\.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {}
+    "C:\\Users\\Bidhya\\Desktop\\.NET\\pokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bidhya\\Desktop\\.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {
+    "C:\\Users\\Bidhya\\Desktop\\.NET\\pokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bidhya\\Desktop\\.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
+        "projectUniqueName": "C:\\Users\\Bidhya\\Desktop\\.NET\\pokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
         "projectName": "PokemonReviewApp",
-        "projectPath": "C:\\Users\\Bidhya\\Desktop\\.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
+        "projectPath": "C:\\Users\\Bidhya\\Desktop\\.NET\\pokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
         "packagesPath": "C:\\Users\\Bidhya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bidhya\\Desktop\\.NET\\PokemonReviewApp\\PokemonReviewApp\\obj\\",
+        "outputPath": "C:\\Users\\Bidhya\\Desktop\\.NET\\pokemonReviewApp\\PokemonReviewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bidhya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.2, )"

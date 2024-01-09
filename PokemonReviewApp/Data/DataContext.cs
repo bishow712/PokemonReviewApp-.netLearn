@@ -7,35 +7,35 @@ namespace PokemonReviewApp.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Owner> Owners { get; set; }
-        public DbSet<Pokemon> Pokemon { get; set; }
-        public DbSet<PokemonOwner> PokemonOwners { get; set; }
-        public DbSet<PokemonCategory> PokemonCategories { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-        public DbSet<Reviewer> Reviewers { get; set; }
+        public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<CountryModel> Countries { get; set; }
+        public DbSet<OwnerModel> Owners { get; set; }
+        public DbSet<PokemonModel> Pokemon { get; set; }
+        public DbSet<PokemonOwnerModel> PokemonOwners { get; set; }
+        public DbSet<PokemonCategoryModel> PokemonCategories { get; set; }
+        public DbSet<ReviewModel> Reviews { get; set; }
+        public DbSet<ReviewerModel> Reviewers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PokemonCategory>()
+            modelBuilder.Entity<PokemonCategoryModel>()
                     .HasKey(pc => new { pc.PokemonId, pc.CategoryId });
-            modelBuilder.Entity<PokemonCategory>()
+            modelBuilder.Entity<PokemonCategoryModel>()
                     .HasOne(p => p.Pokemon)
                     .WithMany(pc => pc.PokemonCategories)
                     .HasForeignKey(p => p.PokemonId);
-            modelBuilder.Entity<PokemonCategory>()
+            modelBuilder.Entity<PokemonCategoryModel>()
                     .HasOne(p => p.Category)
                     .WithMany(pc => pc.PokemonCategories)
                     .HasForeignKey(c => c.CategoryId);
 
-            modelBuilder.Entity<PokemonOwner>()
+            modelBuilder.Entity<PokemonOwnerModel>()
                     .HasKey(po => new { po.PokemonId, po.OwnerId });
-            modelBuilder.Entity<PokemonOwner>()
+            modelBuilder.Entity<PokemonOwnerModel>()
                     .HasOne(p => p.Pokemon)
                     .WithMany(pc => pc.PokemonOwners)
                     .HasForeignKey(p => p.PokemonId);
-            modelBuilder.Entity<PokemonOwner>()
+            modelBuilder.Entity<PokemonOwnerModel>()
                     .HasOne(p => p.Owner)
                     .WithMany(pc => pc.PokemonOwners)
                     .HasForeignKey(c => c.OwnerId);

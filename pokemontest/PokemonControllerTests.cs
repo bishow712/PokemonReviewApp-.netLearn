@@ -15,7 +15,7 @@ public class PokemonControllerTests
     public void GetPokemons_Returns_OkObjectResult_WhenDatabaseFetchSucceeds()
     {
         mockPokemonRepo.Setup(repo => repo.GetPokemonsFromDatabase())
-               .Returns(new List<Pokemon>());
+               .Returns(new List<PokemonModel>());
 
          var pokemonController = new PokemonController(mockPokemonRepo.Object);
 
