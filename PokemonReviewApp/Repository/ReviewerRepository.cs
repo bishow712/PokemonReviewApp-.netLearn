@@ -14,6 +14,13 @@ namespace PokemonReviewApp.Repository
             _context = context;
         }
 
+        public bool CreateReviewer(ReviewerModel reviewer)
+        {
+            _context.Reviewers.Add(reviewer);
+
+            return Save();
+        }
+
         // Include includes the navigation property (Include Reviews too)
         public ReviewerModel GetReviewerById(int reviewerId)
         {
@@ -33,6 +40,13 @@ namespace PokemonReviewApp.Repository
         public bool ReviewerExists(int reviewerId)
         {
             return _context.Reviewers.Any(p => p.Id == reviewerId);
+        }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+
+            return saved > 0 ? true : false;
         }
     }
 }

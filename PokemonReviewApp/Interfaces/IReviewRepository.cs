@@ -1,4 +1,5 @@
-﻿using PokemonReviewApp.Models;
+﻿using PokemonReviewApp.Dto;
+using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Interfaces
 {
@@ -8,5 +9,7 @@ namespace PokemonReviewApp.Interfaces
         ReviewModel GetReviewById(int reviewId);
         ICollection<ReviewModel> GetReviewsOfAPokemon(int pokeId);
         bool ReviewExists(int reviewId);
+        bool CreateReview(ReviewModel review);
+        bool Save();
     }
 }

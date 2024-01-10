@@ -8,6 +8,7 @@ namespace PokemonReviewApp.Helper
     {
         public MappingProfiles()
         {
+            // For GET
             CreateMap<PokemonModel, PokemonDto>();
             CreateMap<CategoryModel, CategoryDto>();
             CreateMap<CountryModel, CountryDto>();
@@ -15,8 +16,13 @@ namespace PokemonReviewApp.Helper
             CreateMap<ReviewModel, ReviewDto>();
             CreateMap<ReviewerModel, ReviewerDto>();
 
+            // For POST
             CreateMap<CategoryDto, CategoryModel>();
-
+            CreateMap<CountryDto, CountryModel>();
+            CreateMap<OwnerDto, OwnerModel>();
+            CreateMap<PokemonDto, PokemonModel>();
+            CreateMap<ReviewDto, ReviewModel>();
+            CreateMap<ReviewerDto, ReviewerModel>();
         }
     }
 }

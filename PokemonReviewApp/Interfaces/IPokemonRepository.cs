@@ -14,5 +14,9 @@ namespace PokemonReviewApp.Interfaces
         decimal GetPokemonAverageRating(int pokeId);
         // Check if that Pokemon exists
         bool PokemonExists(int pokeId);
+        // Feeding a Pokemon to the database (POST)
+        bool CreatePokemon(int ownerId, int categoryId, PokemonModel pokemon);
+        // Saving after POST Request
+        bool Save();
     }
 }

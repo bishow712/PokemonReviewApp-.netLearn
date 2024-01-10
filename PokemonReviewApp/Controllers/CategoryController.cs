@@ -66,6 +66,7 @@ namespace PokemonReviewApp.Controllers
                 .Where(c => c.Name.Trim().ToUpper() == categoryCreate.Name.TrimEnd().ToUpper())
                 .FirstOrDefault();
 
+            // Check if already exists
             if(category != null)
             {
                 ModelState.AddModelError("", "Category Already Exists.");
@@ -75,8 +76,10 @@ namespace PokemonReviewApp.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            // Creating the Category
             var categoryMap = _mapper.Map<CategoryModel>(categoryCreate);
 
+            // Checking for error while creating
             if (!_categoryRepository.CreateCategory(categoryMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving.");
