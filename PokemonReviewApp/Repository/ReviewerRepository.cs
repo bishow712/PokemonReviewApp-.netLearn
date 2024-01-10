@@ -21,6 +21,12 @@ namespace PokemonReviewApp.Repository
             return Save();
         }
 
+        public bool DeleteReviewer(ReviewerModel reviewer)
+        {
+            _context.Remove(reviewer);
+            return Save();
+        }
+
         // Include includes the navigation property (Include Reviews too)
         public ReviewerModel GetReviewerById(int reviewerId)
         {

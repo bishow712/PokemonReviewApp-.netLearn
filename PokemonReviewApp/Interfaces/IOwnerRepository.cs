@@ -11,6 +11,7 @@ namespace PokemonReviewApp.Interfaces
         bool OwnerExists(int ownerId);
         bool CreateOwner(OwnerModel owner);
         bool UpdateOwner(OwnerModel owner);
+        bool DeleteOwner(OwnerModel owner);
         bool Save();
     }
 }

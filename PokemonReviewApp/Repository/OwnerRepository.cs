@@ -21,6 +21,12 @@ namespace PokemonReviewApp.Repository
             return Save();
         }
 
+        public bool DeleteOwner(OwnerModel owner)
+        {
+            _context.Remove(owner);
+            return Save();
+        }
+
         public OwnerModel GetOwnerFromId(int ownerId)
         {
             return _context.Owners.Where(p => p.Id == ownerId).FirstOrDefault();

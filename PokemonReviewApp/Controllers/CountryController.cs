@@ -42,7 +42,7 @@ namespace PokemonReviewApp.Controllers
             return Ok(country);
         }
 
-        [HttpGet("/owners/{ownerId}")]
+        [HttpGet("{ownerId}/owners")]
         [ProducesResponseType(200, Type = typeof(CountryModel))]
         [ProducesResponseType(400)]
         public IActionResult GetCountryOfAnOwner(int ownerId)
@@ -110,6 +110,33 @@ namespace PokemonReviewApp.Controllers
             {
                 ModelState.AddModelError("", "Something went wrong updating country.");
                 return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+
+        [HttpDelete("{countryId}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public IActionResult DeleteCountry(int countryId)
+        {
+            if (!_countryRepository.CountryExists(countryId))
+            {
+                return NotFound();
+            }
+
+
+            var countryToDelete = _countryRepository.GetCountryById(countryId);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!_countryRepository.DeleteCountry(countryToDelete))
+            {
+                ModelState.AddModelError("", "Somwthing went wrong deleting country.");
             }
 
             return NoContent();
