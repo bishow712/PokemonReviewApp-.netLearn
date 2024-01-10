@@ -16,7 +16,7 @@ namespace PokemonReviewApp.Interfaces
         bool PokemonExists(int pokeId);
         // Feeding a Pokemon to the database (POST)
         bool CreatePokemon(int ownerId, int categoryId, PokemonModel pokemon);
-        // Saving after POST Request
+        bool UpdatePokemon(int ownerID, int categoryId, PokemonModel pokemon);
         bool Save();
     }
 }

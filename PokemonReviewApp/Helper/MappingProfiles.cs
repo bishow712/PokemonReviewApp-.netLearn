@@ -16,7 +16,7 @@ namespace PokemonReviewApp.Helper
             CreateMap<ReviewModel, ReviewDto>();
             CreateMap<ReviewerModel, ReviewerDto>();
 
-            // For POST
+            // For POST, PUT
             CreateMap<CategoryDto, CategoryModel>();
             CreateMap<CountryDto, CountryModel>();
             CreateMap<OwnerDto, OwnerModel>();

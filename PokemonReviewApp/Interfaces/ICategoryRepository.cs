@@ -10,6 +10,7 @@ namespace PokemonReviewApp.Interfaces
         ICollection<PokemonModel> GetPokemonsByCategory(int categoryId);
         bool CategoryExists(int id);
         bool CreateCategory(CategoryModel category);
+        bool UpdateCategory(CategoryModel category);
         bool Save();
     }
 }
